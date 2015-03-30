@@ -64,6 +64,7 @@ end
 
 service 'keystone' do
   service_name platform_options['keystone_service']
+  provider Chef::Provider::Service::Upstart
   supports status: true, restart: true
 
   action [:enable]
